@@ -3,11 +3,10 @@
 #include    "BIOS/BIOS_GPIO.h"
 #include    "BIOS/BIOS_PIT.h"
 #include    "BIOS/BIOS_bspi.h"
-#include    "MemAlloc_Cfg.h"
-#include    "SERVICES/SERV_SchM_Cfg.h"
 #include    "BIOS/BIOS_Can.h"
 #include    "BIOS/BIOS_Can_Cfg.h"
 #include    "BIOS/BIOS_sysinit.h"
+#include 	"SERVICES/SERV_SchM.h"
 #include 	"SERVICES/SERV_Exceptions.h"
 #include 	"SERVICES/SERV_IntcInterrupts.h"
 
@@ -21,8 +20,6 @@ int main(void)
 	sysinit_InitMode();
 	/* Clock initializations */
 	sysinit_InitSysClock();
-	/* Memory Allocation Initialization NOT RELEVANT FOR YOUR SCHEDULER */
-	MemAllocInit(&MemAllocConfig);
 	/*Initialize LEDs on TRK-MPC560xB board */
 	vfnGPIO_LED_Init(); 
 	/* SBC (System Basis Chip (the transceiver, you know)) dependencies */
@@ -37,11 +34,12 @@ int main(void)
 	/*Initialize Exception Handlers */
 	EXCEP_InitExceptionHandlers();
 	/* SchM Initialization */
-	SchM_Init(&SchMConfig);
+	SchM_Init();
     /* Enable External Interrupts*/
     INTC_EnableInterrupts();
-    /* SchM Start */
-    SchM_Start();
+    /* Scheduler execution */
+    kernel();
+    
 	/* Infinite loop - Should never reach this point */
 	for (;;) 
 	{

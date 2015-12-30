@@ -30,30 +30,33 @@ tCallbackFunction PIT_Callback[8];
 /****************************************************************************************************/
 /**
 * \brief    PIT device - Low level initialization
+* 			Resets channel and enable PIT debug mode
 * \author   Abraham Tezmol
 * \param    void
 * \return   void
 */
 void PIT_device_init(void) 
 {
-    PIT.PITMCR.R = 0x00000001;       /* Enable PIT and configure timers to stop in debug mode */
+	
+	PIT.PITMCR.B.MDIS = DISABLE_PIT_CLOCKS;
+	PIT.PITMCR.B.FRZ = DEBUG_MODE_ENABLE;     /* Enable PIT and configure timers to stop in debug mode */
 }
 
 /****************************************************************************************************/
 /**
 * \brief    PIT Channel Low level configuration
+* 			Sets timer compare value, enable PIT interrupts,
+*			and enable PIT module 			
 * \author   Abraham Tezmol
 * \param    uint8_t channel - Channel to be configured
 * \param    tCallbackFunction Callback - Function to invoke upon PIT count to zero event
 * \return   void
 */
-void PIT_channel_configure(uint8_t channel, tCallbackFunction Callback) 
+void PIT_channel_configure(uint8_t channel) 
 {
     PIT.CH[channel].LDVAL.R = PIT_CHANNEL_VALUE;      /* PIT1 timeout --> Refer to PIT.h file for calculations */
-    PIT_Callback[channel]   = Callback;               /* Initialize callback function */
-    
-    /* Install Interrupt routine for this specific channel */
-    INTC_InstallINTCInterruptHandler(PIT_channel_0_isr,59,5);
+	PIT.CH[channel].TCTRL.B.TIE = ENABLE_INTERRUPT; /*Verify if necessary*/
+	PIT.PITMCR.B.MDIS = ENABLE_PIT_CLOCKS;
     INTC.CPR.R = 0;
 }
 
@@ -66,7 +69,7 @@ void PIT_channel_configure(uint8_t channel, tCallbackFunction Callback)
 */
 void PIT_channel_start(uint8_t channel)
 {
-    PIT.CH[channel].TCTRL.R = 0x000000003;            /* Enable PIT1 interrupt and make PIT active to count */
+	PIT.CH[channel].TCTRL.B.TEN = ENABLE_TIMER;           /* Enable PIT1 interrupt and make PIT active to count */
 }
 
 
@@ -90,17 +93,4 @@ void PIT_channel_stop(uint8_t channel)
 * \return   void
 * \todo
 */
-void PIT_channel_0_isr(void)
-{
-  if (PIT.CH[0].TFLG.B.TIF)
-  {
-    /* Clear the time-base interrupt flag */
-    PIT.CH[0].TFLG.B.TIF = 1;
-    
-    /*call callback function, if initialized*/
-        if( PIT_Callback[0] != NULL )
-        {
-            PIT_Callback[0]();
-        }
-  }
-}
+

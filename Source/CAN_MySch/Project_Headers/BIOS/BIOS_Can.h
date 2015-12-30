@@ -32,7 +32,6 @@ extern void CAN_SendFrame(CAN_PduType *pdu_handler);
 extern uint8_t CAN_ReceiveFrame(uint8_t message_buffer, CAN_MessageDataType *can_message );
 extern void CAN_Stop(void);
 extern uint8_t CAN_SendFrameInt(uint8_t can_eng, uint8_t can_channel, uint8_t *can_msg_buf, uint8_t len);  //Yo la puse
-extern void CANB_Isr(void); //Yo l apuse
-extern void CAN_IO_Config(void);  //Yo la puse
+
 /*~E*/
 #endif

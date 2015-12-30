@@ -29,12 +29,18 @@ uint8_t dummy_msg8[2] = {0x00,0x00};
 uint8_t dummy_msg9[8] = {0x33,0x44,0x55,0x66,0x88,0x89,0x45,0x4C};
 
 /** PDU: Protocol data unit */
-CAN_PduType    pdu_handler4 = { 4, 8, dummy_msg0};
-CAN_PduType    pdu_handler5 = { 5, 6, dummy_msg1};
-CAN_PduType    pdu_handler6 = { 6, 2, dummy_msg2};
-CAN_PduType    pdu_handler7 = { 2, 4, dummy_msg2};
-CAN_PduType    pdu_handler8 = { 8, 2, dummy_msg8};
-CAN_PduType    pdu_handler9 = { 9, 8, dummy_msg9};
+/*	{handler number, bytes number, message}			*/
+/*			|              |	     |              */
+/*          |              |         ------			*/
+/*          |               -------    	   |		*/
+/*          --------------------   |  	   |		*/
+/*								|  |	   |		*/
+CAN_PduType    pdu_handler4 = { 4, 8, dummy_msg0}; /* msg0->{0xCA,0x83,0x15,0x77,0x19,0x56,0x65,0x00}*/
+CAN_PduType    pdu_handler5 = { 5, 6, dummy_msg1}; /* msg1->{0x00,0x65,0x56,0x19,0x77,0x15,0x83,0xCA}*/
+CAN_PduType    pdu_handler6 = { 6, 2, dummy_msg2}; /* msg2->{0x33,0x44,0x55,0x66,0x88,0x89,0x45,0x4C}*/
+CAN_PduType    pdu_handler7 = { 2, 4, dummy_msg2}; /* msg2->{0x33,0x44,0x55,0x66,0x88,0x89,0x45,0x4C}*/
+CAN_PduType    pdu_handler8 = { 8, 2, dummy_msg8}; /* msg8->{0x00,0x00}*/
+CAN_PduType    pdu_handler9 = { 9, 8, dummy_msg9}; /* msg9->{0x33,0x44,0x55,0x66,0x88,0x89,0x45,0x4C}*/
 
 uint32_t PduHandlerCnt0 = 0;
 uint32_t PduHandlerCnt6 = 0;

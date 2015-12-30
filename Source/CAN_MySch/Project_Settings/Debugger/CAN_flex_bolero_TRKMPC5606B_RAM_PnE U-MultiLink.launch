@@ -40,20 +40,37 @@
 <listAttribute key="com.freescale.cdt.debug.cw.CoreNameList">
 <listEntry value="e200z0h#0"/>
 </listAttribute>
+<listAttribute key="com.freescale.cdt.debug.cw.Debug"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.DebuggerTab.StopAtExit" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.DebuggerTab.StopAtProgramEntryPoint" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.DebuggerTab.StopAtStartUp" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.DebuggerTab.StopAtUserSpecified" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.Embedded Download.StandardDownload" value="true"/>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskInitialLaunches"/>
 <listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskNames"/>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskSuccessiveRuns"/>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskTypes"/>
+<listAttribute key="com.freescale.cdt.debug.cw.ExecutablePath"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.InitializePC" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.InitializePCAtProgramEntryPoint" value="true"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.InitializePCAtSymbol" value="main"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.InitializePCAtUserSpecified" value="false"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.LaunchMode" value="DOWNLOAD"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtExit" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtProgramEntryPoint" value="false"/>
-<listAttribute key="com.freescale.cdt.debug.cw.SMPCores">
-<listEntry value="0"/>
-</listAttribute>
+<booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtStartUp" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtUserSpecified" value="true"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.RefreshPolicy.RefreshPeriod" value="2.0"/>
+<listAttribute key="com.freescale.cdt.debug.cw.RemoteDownload"/>
+<listAttribute key="com.freescale.cdt.debug.cw.RemotePath"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.ResumeProgram" value="true"/>
+<listAttribute key="com.freescale.cdt.debug.cw.SMPCores"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.SYNC_WITH_ENCL_PROJ" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.Symbolics.CacheSymbolicsBetweenRuns" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.Symbolics.UseExecutableCopy" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.UDPPort" value="1234"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.UseApplication" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.RetryConnectionOn" value="false"/>
 <intAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.RetryTimeout" value="20"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.RetryWithTimeoutOn" value="false"/>
@@ -70,9 +87,11 @@
 <stringAttribute key="com.freescale.cdt.debug.cw.debuggerAddress" value="127.0.0.1"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.disableIO" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.ethCtrl" value="UEC1"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.executeInitScripts" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.executePerCoresReset" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.executePerprocessorReset" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.executeReset" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.executeResetSequence" value="true"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.gateway" value="127.0.0.1"/>
 <listAttribute key="com.freescale.cdt.debug.cw.initPathList">
 <listEntry value="${ProjDirPath}/Project_Settings/Debugger/MPC5606B_VLE.tcl"/>
@@ -82,11 +101,15 @@
 <listEntry value="${ProjDirPath}/Project_Settings/Debugger/MPC5606B.mem"/>
 </listAttribute>
 <stringAttribute key="com.freescale.cdt.debug.cw.netMask" value="255.255.255.255"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.osawareness.osContributorID" value="None"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.osawareness.rtospluginname" value=""/>
+<stringAttribute key="com.freescale.cdt.debug.cw.osawareness.targetos" value="None"/>
 <listAttribute key="com.freescale.cdt.debug.cw.perCoreResetList"/>
 <listAttribute key="com.freescale.cdt.debug.cw.perProcessorResetList"/>
 <listAttribute key="com.freescale.cdt.debug.cw.runOutOfResetList">
 <listEntry value="false"/>
 </listAttribute>
+<booleanAttribute key="com.freescale.cdt.debug.cw.skipSystemInitialization" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.targetAddress" value="127.0.0.1"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useGateway" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useHSSTIO" value="false"/>
@@ -111,6 +134,8 @@
 <listEntry value="Symbolics"/>
 <listEntry value="osawareness"/>
 </listAttribute>
+<booleanAttribute key="com.freescale.sa.mcu.launch.ENABLE_ANALYSIS" value="false"/>
+<booleanAttribute key="com.freescale.sa.mcu.launch.SET_TGT_SETTING_ON_RUN" value="false"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.eppc.CommandLineArgs" value=""/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.eppc.ConfigFile" value=""/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.eppc.Library" value="eppc_pne_gdi"/>
@@ -121,14 +146,27 @@
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.eppc.STARTUP_PORT" value="21"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.eppc.STARTUP_interface_selection" value="1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.eppc.names_of_user_added_attributes" value=""/>
+<intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.eppc.EPPCDebugger"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_RESTORE_WATCHPOINTS" value="true"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="RAM/CAN_flex_bolero_TRKMPC5606B.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="CAN_MySch"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.freescale.ppc.debug.toolchain.configuration.90545433"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
+<intAttribute key="org.eclipse.cdt.launch.SET_REGULAR_BREAKPOINT_TYPE_AS" value="0"/>
+<booleanAttribute key="org.eclipse.cdt.launch.USE_SET_REGULAR_BREAKPOINT_TYPE_AS" value="false"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/CAN_MySch"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_REDIRECT_TO_SERVER_SOCKET" value="false"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_REDIRECT_TO_SOCKET" value="false"/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_REDIRECT_TO_SOCKET_HOST" value=""/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_REDIRECT_TO_SOCKET_PORT" value=""/>
 </launchConfiguration>

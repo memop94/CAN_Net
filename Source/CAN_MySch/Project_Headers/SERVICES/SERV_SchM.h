@@ -10,13 +10,41 @@
 #ifndef __SchM_H
 #define __SchM_H
 
-#include "SERVICES/SERV_SchM_Types.h"
+/* MCU-specific derivative */
+#include "MCU_derivative.h" 
 
-extern void SchM_Init(const SchM_ConfigType *SchMConfigParam);
-extern void SchM_Start(void);
-extern void SchM_Stop(void);
-extern void SchM_OsTick(void); //Yo la puse
-extern void SchM_Background(void);  //Yo la puse
+#include "SERVICES/SERV_SchM_Types.h"
+#include "SERVICES/SERV_SchM_Tasks.h"
+
+/* Constants and types */
+/*============================================================================*/
+extern enum{
+	E_TASK1, 
+	E_TASK2,
+	E_TASK3,
+	/*DO NOT MODIFIED OR ERASE*/
+	E_TASK_NUM
+	
+};
+
+
+/* Exported Variables */
+/*============================================================================*/
+
+typedef struct {
+	void(* rp_Tasks)(void); /*Pointer that'll call the task*/
+	T_ULONG rul_Period; 	/*Period of task*/
+    T_ULONG rul_Offset; 	/*Offset of task*/
+}S_TASK;
+
+/* Exported functions prototypes */
+/*============================================================================*/
+void kernel (void);
+
+extern void SchM_Init(void);
+
+/* Tick Interrupt  */
+void TickFlag( void  );
 
 
 #endif /* __SchM_H */

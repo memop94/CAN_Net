@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 21
+#Progress monitor hint: 19
 first : all
 -include ../makefile.init
 
@@ -76,7 +76,7 @@ all: warning-messages explicit-dependencies CAN_MySch.elf
 # Tool invocations
 CAN_MySch.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/MPC5606B_RAM.lcf
 	@echo 'Building target: $@'
-	@echo 'Executing target #22 $@'
+	@echo 'Executing target #20 $@'
 	@echo 'Invoking: PowerPC Linker'
 	"$(PAToolsDirEnv)/mwldeppc" -o "CAN_MySch.elf" @@"CAN_MySch.args"  $(USER_OBJS_QUOTED)
 	@echo 'Finished building target: $@'

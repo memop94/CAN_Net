@@ -30,7 +30,6 @@
 
 /* PIT_Callback[], function to be called upon event trigger on PIT channels */
 extern tCallbackFunction PIT_Callback[8];
-	
 
 /*****************************************************************************************************
 * Definition of module wide MACROS / #DEFINE-CONSTANTS 
@@ -45,7 +44,11 @@ extern tCallbackFunction PIT_Callback[8];
 /** Periodic Interrupt Timer macros */
 #define    PIT_CHANNEL_VALUE            	( ( PIT_DEVICE_FREQUENCY / PIT_CHANNEL_TARGET_FREQUENCY ) - 1 )
 
-
+#define ENABLE_PIT_CLOCKS 0
+#define DISABLE_PIT_CLOCKS 1
+#define ENABLE_TIMER 1
+#define ENABLE_INTERRUPT 1
+#define DEBUG_MODE_ENABLE 1
 /*****************************************************************************************************
 * Declaration of module wide FUNCTIONS
 *****************************************************************************************************/
@@ -54,7 +57,7 @@ extern tCallbackFunction PIT_Callback[8];
 void PIT_device_init(void);
 
 /* PIT Low level channel configuration */
-void PIT_channel_configure(uint8_t channel, tCallbackFunction Callback);
+void PIT_channel_configure(uint8_t channel);
 
 /** PIT Low level Start procedure */
 void PIT_channel_start(uint8_t channel);
@@ -62,8 +65,6 @@ void PIT_channel_start(uint8_t channel);
 /** PIT Low level Stop procedure */
 void PIT_channel_stop(uint8_t channel);
 
-/** PIT Channel 0 ISR  */
-void PIT_channel_0_isr( void  );
 
 
 /*******************************************************************************/

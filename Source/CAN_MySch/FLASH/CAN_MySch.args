@@ -11,14 +11,11 @@
 "./Sources/BIOS/BIOS_Can_c.obj"
 "./Sources/SERVICES/SERV_ivor_branch_table_c.obj"
 "./Sources/SERVICES/SERV_SchM_Tasks_c.obj"
-"./Sources/SERVICES/SERV_SchM_Cfg_c.obj"
 "./Sources/SERVICES/SERV_SchM_c.obj"
 "./Sources/SERVICES/SERV_IntcInterrupts_c.obj"
 "./Sources/SERVICES/SERV_Exceptions_c.obj"
 "./Sources/SERVICES/SERV_Can_Manager_c.obj"
 "./Sources/main_c.obj"
-"./Sources/MemAlloc_Cfg_c.obj"
-"./Sources/MemAlloc_c.obj"
 -sym dwarf-2
 -sym full
 -msgstyle parseable
