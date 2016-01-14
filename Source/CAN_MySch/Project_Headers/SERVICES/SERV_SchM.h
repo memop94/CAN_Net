@@ -13,7 +13,6 @@
 /* MCU-specific derivative */
 #include "MCU_derivative.h" 
 
-#include "SERVICES/SERV_SchM_Types.h"
 #include "SERVICES/SERV_SchM_Tasks.h"
 
 /* Constants and types */
@@ -22,6 +21,7 @@ extern enum{
 	E_TASK1, 
 	E_TASK2,
 	E_TASK3,
+	E_TASK4,
 	/*DO NOT MODIFIED OR ERASE*/
 	E_TASK_NUM
 	

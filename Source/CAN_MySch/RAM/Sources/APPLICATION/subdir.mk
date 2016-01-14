@@ -30,7 +30,7 @@ C_DEPS_QUOTED += \
 # Each subdirectory must supply rules for building sources it contributes
 Sources/APPLICATION/APP_dummy_c.obj: ../Sources/APPLICATION/APP_dummy.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #15 $<'
+	@echo 'Executing target #14 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/APPLICATION/APP_dummy.args" -o "Sources/APPLICATION/APP_dummy_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'

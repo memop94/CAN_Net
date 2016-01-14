@@ -14,25 +14,20 @@
 /*~+:Import*/
 #include "SERVICES/SERV_SchM_Tasks.h"
 #include "SERVICES/SERV_Can_Manager.h"
-#include "APPLICATION/APP_dummy.h"
+#include "APPLICATION/APP_Sensors_Flags.h"
+#include "APPLICATION/APP_Passenger_Seatbealt_Bassic.h"
+#include "APPLICATION\APP_SBR_Driver.h"
 /*~E*/
 /*~A*/
 /*~+:Scheduler Tasks*/
 /*~A*/
 /*~+:SchM_3p125ms_Task*/
 
-void SchM_3p125ms_Task(void)
+void SchM_10ms_Task(void)
 {
-
+	P_SB_SensorState();
 }
-/*~E*/
-/*~A*/
-/*~+:SchM_6p25ms_Task*/
 
-void SchM_6p25ms_Task(void)
-{
-	Test();
-}
 /*~E*/
 /*~A*/
 /*~+:SchM_12p5ms_Task*/
@@ -47,6 +42,7 @@ void SchM_12p5ms_Task(void)
 
 void SchM_25ms_Task(void)
 {
+	P_S_SensorState();
 	CanManager_SendMessage_25ms();
 }
 /*~E*/
@@ -55,7 +51,7 @@ void SchM_25ms_Task(void)
 
 void SchM_50ms_Task(void)
 {
-	
+	BasicReminder();
 }
 /*~E*/
 /*~A*/

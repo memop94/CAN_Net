@@ -11,7 +11,6 @@
 "./Sources/BIOS/BIOS_Can_c.obj"
 "./Sources/SERVICES/SERV_ivor_branch_table_c.obj"
 "./Sources/SERVICES/SERV_SchM_Tasks_c.obj"
-"./Sources/SERVICES/SERV_SchM_Cfg_c.obj"
 "./Sources/SERVICES/SERV_SchM_c.obj"
 "./Sources/SERVICES/SERV_IntcInterrupts_c.obj"
 "./Sources/SERVICES/SERV_Exceptions_c.obj"

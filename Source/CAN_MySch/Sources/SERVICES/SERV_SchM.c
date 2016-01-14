@@ -35,9 +35,10 @@ T_UBYTE rub_TickFlag;
 /*Tasks definition*/
 const S_TASK cas_TaskList[E_TASK_NUM] = {
   /*{Task, 				 Period , Offset}*/
-	{SchM_6p25ms_Task  	, 	6	, 	1},
+	{SchM_10ms_Task  	, 	10	, 	1},
 	{SchM_12p5ms_Task	, 	12	, 	2}, 
 	{SchM_25ms_Task  	, 	25	, 	3},
+	{SchM_50ms_Task  	, 	100	, 	4},
 };
 
 /********************************************************************************

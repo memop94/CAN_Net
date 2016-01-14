@@ -6,6 +6,7 @@
 #include    "BIOS/BIOS_Can.h"
 #include    "BIOS/BIOS_Can_Cfg.h"
 #include    "BIOS/BIOS_sysinit.h"
+#include    "BIOS/BIOS_ADC_Init.h"
 #include 	"SERVICES/SERV_SchM.h"
 #include 	"SERVICES/SERV_Exceptions.h"
 #include 	"SERVICES/SERV_IntcInterrupts.h"
@@ -37,6 +38,8 @@ int main(void)
 	SchM_Init();
     /* Enable External Interrupts*/
     INTC_EnableInterrupts();
+    /* ADC Init*/
+    adc_0_init_fnc();
     /* Scheduler execution */
     kernel();
     

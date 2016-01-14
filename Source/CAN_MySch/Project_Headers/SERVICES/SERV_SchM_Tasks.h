@@ -12,7 +12,7 @@
 
 extern void SchM_3p125ms_Task(void);
 
-extern void SchM_6p25ms_Task(void);
+extern void SchM_10ms_Task(void);
 
 extern void SchM_12p5ms_Task(void);
 

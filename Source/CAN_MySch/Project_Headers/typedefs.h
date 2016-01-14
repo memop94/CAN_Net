@@ -5,10 +5,6 @@
  *========================================================================*
  * ORIGINAL AUTHOR: Jeff Loeliger (r12110)                                *
  * $Log: typedefs.h,v $
- * Revision 1.1  2010/07/21 13:28:05  dmihail1
- * Add to DataBase: 'runtime' folder
- * See: MTWX40737, MTWX40738, MTWX40743, MTWX42016
- *
  * Revision 1.7  2007/05/02 22:46:00  dfreeland
  * Use latest web version
  *
@@ -110,6 +106,14 @@
     typedef unsigned int uint32_t;
     typedef volatile signed int vint32_t;
     typedef volatile unsigned int vuint32_t;
+    
+    typedef unsigned char   T_UBYTE;  /* Range: from 0 to 255      */
+    typedef unsigned short  T_UWORD;  /* Range: from 0 to 65535    */
+    typedef unsigned int    T_ULONG;  /* Range: from 0 to FFFFFFFFh*/
+
+    typedef signed   char   T_SBYTE;  /* Range: from -128       to 127      */
+    typedef signed   short  T_SWORD;  /* Range: from -32768     to 32767    */
+    typedef signed   int    T_SLONG;  /* Range: from -80000000h to 7FFFFFFFh*/
 
 
 #endif
@@ -146,6 +150,5 @@
  *  maintenance and support of this software
  *
  ********************************************************************/
-
 
 

@@ -39,7 +39,7 @@ extern tCallbackFunction PIT_Callback[8];
 #define    PIT_CHANNEL_0					0
 
 #define    PIT_DEVICE_FREQUENCY           (uint32_t)64000000
-#define    PIT_CHANNEL_TARGET_FREQUENCY   (uint32_t)1280
+#define    PIT_CHANNEL_TARGET_FREQUENCY   (uint32_t)1000
 
 /** Periodic Interrupt Timer macros */
 #define    PIT_CHANNEL_VALUE            	( ( PIT_DEVICE_FREQUENCY / PIT_CHANNEL_TARGET_FREQUENCY ) - 1 )

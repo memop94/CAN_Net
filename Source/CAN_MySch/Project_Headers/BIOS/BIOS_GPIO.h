@@ -31,8 +31,15 @@
 #define LED3       					70
 #define LED4        				71
 
+#define ADC_D_SB   					20
+#define ADC_P_SB  					21
+#define ADC_P_SS   					22
+
 #define GPIO_INPUT					0
 #define GPIO_OUTPUT					1
+#define GPIO_ADC					2
+
+#define EN_ANALOG_INP 				0x2000
 
 #define GPIO_OPEN_DRAIN_DISABLE		0
 #define GPIO_OPEN_DRAIN_ENABLE		1

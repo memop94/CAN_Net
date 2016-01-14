@@ -257,4 +257,5 @@ extern void sysinit_InitSysClock(void);
 extern void sysinit_InitMode(void);
 extern void sysinit_ChangeMode(T_ULONG lub_newMode);
 
+
 #endif
